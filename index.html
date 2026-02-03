@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Located inside Mélange Gallery of Salons, My Elite Massage, LLC specializes in customized massage therapy to relieve stress, aches, pains, strains, and other joint and muscle issues.">
-    <meta name="keywords" content="massage therapy, orthopedic massage, Friendswood TX, massage near me, Kevin Smith LMT, deep tissue massage, sports massage, relaxation massage">
+    <meta name="keywords" content="massage therapy, orthopedic massage, pain relief, stress relief, scar treatment, concussion therapy, vagus nerve, vagal nerve, Friendswood TX, League City TX, Pearland TX, Webster TX, Alvin TX, massage near me, Kevin Smith LMT, Kevin, My Elite Massage, sports massage, relaxation massage">
     <title>Massage Therapy Near Me | My Elite Massage, LLC</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,28 +152,31 @@
             min-height: calc(118vh - 43px);
             position: relative;
             top: 60px;    
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero-bg.jpg') center Top/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 120px 20px 60px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('images/hero-1.jpg');
+            transition: background-image 1s ease-in-out;
         }
         
         .hero h1 {
-    margin-top: -30px;
-    font-family: 'Roboto', serif;
-    font-size: 3.25rem;
-    font-weight: 300;
-    font-style: Normal;
-    color: var(--white);
-    margin-bottom: 40px;
-}
+            margin-top: -30px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3.25rem;
+            font-weight: 300;
+            font-style: Normal;
+            color: var(--white);
+            margin-bottom: 40px;
+        }
 
-.hero h1 strong {
-    font-weight: 500;
-}        
+        .hero h1 strong {
+            font-weight: 500;
+        }        
         .hero-buttons {
             display: flex;
             gap: 20px;
@@ -186,7 +189,7 @@
             font-size: 1.1rem;
             font-weight: 500;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 25px;
             transition: background 0.3s;
             min-width: 200px;
     	    text-align: center;
@@ -1270,6 +1273,24 @@
             alert("This form is reserved for client inquiries.");
         }
     });
+    </script>
+
+    <script>
+        // Hero slideshow
+        const heroImages = [
+            'images/hero-1.jpg',
+            'images/hero-2.jpg',
+            'images/hero-3.jpg',
+            'images/hero-4.jpg',
+            'images/hero-5.jpg'
+        ];
+        let currentImage = 0;
+        const hero = document.querySelector('.hero');
+    
+        setInterval(() => {
+            currentImage = (currentImage + 1) % heroImages.length;
+            hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
+        }, 4500);
     </script>
 
 </body>
