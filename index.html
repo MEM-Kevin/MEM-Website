@@ -1294,11 +1294,22 @@
         let currentImage = 0;
         const hero = document.querySelector('.hero');
     
+        // Create overlay for crossfade
+        const overlay = document.createElement('div');
+        overlay.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s;z-index:-1;';
+        hero.style.position = 'relative';
+        hero.appendChild(overlay);
+    
         setInterval(() => {
             currentImage = (currentImage + 1) % heroImages.length;
-            hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
-        }, 4250);
+            overlay.style.backgroundImage = `url('${heroImages[currentImage]}')`;
+            overlay.style.opacity = '1';
+        
+            setTimeout(() => {
+                hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
+                overlay.style.opacity = '0';
+            }, 1000);
+        }, 5250);
     </script>
-
 </body>
 </html>
