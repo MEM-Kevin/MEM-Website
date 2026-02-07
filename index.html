@@ -832,6 +832,10 @@
         .mobile-nav-overlay.active {
             display: block;
         }
+
+        #about, #services, #gallery, #reviews, #profile, #contact {
+            scroll-margin-top: 100px;
+    }
         
         /* ========== RESPONSIVE ========== */
         @media (max-width: 900px) {
@@ -887,26 +891,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <body>
     <!-- Mobile Navigation -->
-    <div class="mobile-nav-overlay" id="navOverlay"></div>
-    <nav class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav-close" id="navClose">×</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li class="coming-soon" style="display: none;"><a href="off-the-table.html">Off The Table Newsletter</a></li>
-            <li><a href="https://kevins.massagetherapy.com/frequently-asked-questions" target="_blank">FAQ</a></li>
-            <li><a href="#services">What We Offer</a></li>
-            <li class="coming-soon" style="display: none;"><a href="services.html">Services</a></li>
-            <li class="coming-soon" style="display: none;"><a href="custom-memberships.html">Custom Memberships</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#reviews">Client Reviews</a></li>
-            <li class="coming-soon" style="display: none;"><a href="discounts.html">Discounts</a></li>
-            <li><a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/vouchers?menu=true" target="_blank">Online Giftcards</a></li>
-            <li><a href="https://www.fresha.com/book-now/my-elite-massage-llc-oa1wvgdo/services?lid=525184&eid=1521604&pId=490794" target="_blank">Book Now</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
 
     <!-- Header -->
     <header>
@@ -1214,36 +1198,6 @@
     </div>
 
     <script>
-        // Mobile navigation
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        const navOverlay = document.getElementById('navOverlay');
-        const navClose = document.getElementById('navClose');
-        
-        menuToggle.addEventListener('click', () => {
-            mobileNav.classList.add('active');
-            navOverlay.classList.add('active');
-        });
-        
-        navClose.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            navOverlay.classList.remove('active');
-        });
-        
-        navOverlay.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            navOverlay.classList.remove('active');
-        });
-        
-        // Close nav when clicking a link
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                navOverlay.classList.remove('active');
-            });
-        });
-    </script>
-    <script>
     document.addEventListener("DOMContentLoaded", function () {
         const inquiry = document.getElementById("inquiry_type");
         const message = document.getElementById("message");
@@ -1311,5 +1265,6 @@
             }, 1000);
         }, 5250);
     </script>
+    <script src="nav.js"></script>
 </body>
 </html>
