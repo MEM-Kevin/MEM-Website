@@ -835,7 +835,11 @@
 
         #about, #services, #gallery, #reviews, #profile, #contact {
             scroll-margin-top: 100px;
-    }
+        }
+
+        #location, #hours {
+            scroll-margin-top: 150px;
+        }
         
         /* ========== RESPONSIVE ========== */
         @media (max-width: 900px) {
@@ -886,6 +890,54 @@
                 align-items: flex-start;
             }
         }
+        
+        .has-submenu .submenu {
+            display: none;
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .has-submenu.open .submenu {
+            display: block;
+        }
+
+        .has-submenu .arrow {
+            font-size: 0.7rem;
+            margin-left: 10px;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+        
+        .has-submenu.open > a .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .submenu li {
+            border-bottom: none;
+        }
+        
+        .submenu li a {
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                display: none;
+            }
+        }
+
+        .btn-valentine {
+            background: white !important;
+            border: 2px solid #8B0000 !important;
+            color: #8B0000 !important;
+        }
+
+        .btn-valentine:hover {
+            background: #8B0000 !important;
+            color: white !important;
+        }
+
     </style>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -919,8 +971,9 @@
         <h1><strong>Welcome to My Elite Massage</strong></h1>
         <div class="hero-buttons">
     		<a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/booking?menu=true&pId=490794&dppub=true&employeeId=1521604" class="btn btn-gold" target="_blank">Book Now</a>
-    		<a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/gift-cards?menu=true" class="btn btn-gold" target="_blank">Online Giftcards</a>
-    		<a href="https://www.fresha.com/book-now/my-elite-massage-llc-oa1wvgdo/paid-plans?share=true&pId=490794" class="btn btn-gold" target="_blank">Memberships</a>
+    		<a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/gift-cards?menu=true" class="btn btn-gold btn-valentine" target="_blank">Online Giftcards</a>
+            <a href="https://www.fresha.com/book-now/my-elite-massage-llc-oa1wvgdo/paid-plans?share=true&pId=490794" class="btn btn-gold" target="_blank">Memberships</a>
+            
 	</div>
     </section>
 
@@ -1110,6 +1163,7 @@
             </div>
             
             <div class="contact-info-section">
+                <div id="location"></div>
                 <h3>My Elite Massage, LLC</h3>
                 <address>
                     400 W Parkwood Ave<br>
@@ -1119,6 +1173,7 @@
 
                 <a href="https://maps.google.com/maps?q=400+W+Parkwood+Ave%2C+Friendswood%2C+TX+77546" class="btn btn-gold" target="_blank">Get Directions</a>
                 
+                <div id="hours"></div>
                 <div class="contact-hours">
                     <div class="hours-row"><span>Mon, Wed</span><span>11:00 am - 7:00 pm</span></div>
                     <div class="hours-row"><span>Tuesday</span><span>1:30 pm - 5:00 pm</span></div>
@@ -1264,6 +1319,23 @@
                 overlay.style.opacity = '0';
             }, 1000);
         }, 5250);
+    </script>
+    <script>
+        window.pageSpecificLinks = `
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">On This Page <span class="arrow">▶</span></a>
+                <ul class="submenu">
+                    <li><a href="#about">About My Elite Massage</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#hours">Hours</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </li>
+        `;
     </script>
     <script src="nav.js"></script>
 </body>
