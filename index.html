@@ -92,6 +92,17 @@
             align-items: center;
             justify-content: space-between;
         }
+
+        .tagline {
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-style: italic;
+            margin-top: -8px;
+            background: linear-gradient(90deg, var(--gold) 0%, #E8D5A3 50%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         
         .menu-toggle {
             display: flex;
@@ -166,18 +177,26 @@
         }
         
         .hero h1 {
-            margin-top: -30px;
+            margin-top: -40px;
             font-family: 'Roboto', sans-serif;
             font-size: 3.25rem;
             font-weight: 300;
             font-style: Normal;
             color: var(--white);
-            margin-bottom: 40px;
+            margin-bottom: -15px;
         }
 
         .hero h1 strong {
             font-weight: 500;
         }        
+        
+        .hero-tagline {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
         .hero-buttons {
             display: flex;
             gap: 20px;
@@ -922,28 +941,11 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
             .hero {
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-color: var(--black);
             }
-        }
-
-        .btn-valentine {
-            background: white !important;
-            border: 2px solid #8B0000 !important;
-            color: #8B0000 !important;
-        }
-
-        .btn-valentine:hover {
-            background: #8B0000 !important;
-            color: white !important;
         }
 
     </style>
@@ -963,6 +965,7 @@
                       
             <div class="header-logo">
                 <img src="images/logo-black-bg.png" alt="My Elite Massage">
+                <div class="tagline">Because "functioning adult" is way harder than it looks.</div>
             </div>
     	    <div class="header-rating">
     		<!-- Elfsight Google Reviews | Review Badge -->
@@ -977,9 +980,10 @@
     <!-- Hero -->
     <section class="hero">
         <h1><strong>Welcome to My Elite Massage</strong></h1>
+        <p class="hero-tagline">More Than Your Average Massage</p>
         <div class="hero-buttons">
     		<a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/booking?menu=true&pId=490794&dppub=true&employeeId=1521604" class="btn btn-gold" target="_blank">Book Now</a>
-    		<a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/gift-cards?menu=true" class="btn btn-gold btn-valentine" target="_blank">Online Giftcards</a>
+    		<a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/gift-cards?menu=true" class="btn btn-gold" target="_blank">Online Giftcards</a>
             <a href="https://www.fresha.com/book-now/my-elite-massage-llc-oa1wvgdo/paid-plans?share=true&pId=490794" class="btn btn-gold" target="_blank">Memberships</a>
             
 	</div>
