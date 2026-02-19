@@ -188,7 +188,17 @@
 
         .hero h1 strong {
             font-weight: 500;
-        }        
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 strong {
+                display: block;
+            }
+            .hero-tagline {
+                font-size: 4vw;
+                white-space: nowrap;
+            }
+        }
         
         .hero-tagline {
             color: var(--white);
