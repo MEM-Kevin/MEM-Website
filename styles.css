@@ -690,8 +690,173 @@
             text-decoration: none;
             font-size: 1.2rem;
         }
+
+        .page-content {
+            position: relative;
+        }
+
+        .page-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 460px;
+            background-image: url('images/hero-1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25;
+            z-index: 0;
+            -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 95%);
+			mask-image: linear-gradient(to bottom, black 50%, transparent 95%);
+        }
+
+        .page-content .section-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-content .section-title {
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+        .page-content .intro-text {
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+            font-weight: bold;
+        }
+
+        .page-content .service-links a {
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
         
-        /* ========== FOOTER ========== */
+        .intro-text {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .service-links {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service-links li {
+            margin: 10px 8;
+        }
+
+        .service-links a {
+            color: #003366;
+            text-decoration: underline;
+            font-size: 1.2rem;
+        }
+
+        .service-links a:hover {
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .service-section {
+            margin-bottom: 20px;
+            scroll-margin-top: 150px;
+        }
+
+        .service-section h2 {
+            font-family: 'Alata', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .service-section h3 {
+            font-family: 'Alata', sans-serif;
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+            color: var(--text-dark);
+        }
+        
+        .service-image {
+            float: left;
+            max-width: 250px;
+            height: auto;
+            margin: 0 20px 15px 0;
+            border-radius: 8px;
+        }
+
+        .service-section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .content-link {
+            color: #0066CC;
+            text-decoration: underline;
+        }
+
+        .content-link:hover {
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .faq-list {
+			margin: 10px 0 10px 30px;
+			padding-left: 10px;
+			list-style: disc;
+		}
+
+        .back-to-top-btn {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			width: 45px;
+			height: 45px;
+			background: var(--gold);
+			color: var(--white);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			font-size: 1.3rem;
+			overflow: hidden;
+			transition: width 0.3s, border-radius 0.3s;
+			z-index: 999;
+		}
+
+        .back-to-top-btn .btn-text {
+			display: none;
+			white-space: nowrap;
+			margin-left: 8px;
+			font-size: 0.9rem;
+		}
+
+		.back-to-top-btn:hover {
+			width: 140px;
+			border-radius: 25px;
+		}
+
+		.back-to-top-btn:hover .btn-text {
+			display: inline;
+		}
+
+		.back-to-top-btn .arrow {
+			font-weight: bold;
+		}
+                
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            margin: 20px 0;
+        }
+                
+        .video-container iframe {
+            width: 100%;
+            height: 315px;
+        }
+
+    /* ========== FOOTER ========== */
         .footer-main {
             background: var(--gold);
             padding: 50px 20px;
@@ -930,5 +1095,13 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-color: var(--black);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-image {
+                float: none;
+                max-width: 100%;
+                margin: 0 0 15px 0;
             }
         }

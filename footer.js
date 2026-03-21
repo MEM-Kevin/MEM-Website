@@ -48,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
         <br>
         © 2026 My Elite Massage, LLC. All rights reserved.
     </div>
+
+    <a href="#top" class="back-to-top-btn" title="Back to top">
+        <span class="arrow">⮝</span>
+        <span class="btn-text">Back to top</span>
+    </a>
     `;
     
     document.body.insertAdjacentHTML('beforeend', footerHTML);

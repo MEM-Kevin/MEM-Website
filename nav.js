@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <ul>
             <li><a href="index.html">Home</a></li>
             ${pageLinks}
-            <li><a href="discounts.html">Discounts</a></li>
-            <li><a href="https://kevins.massagetherapy.com/faq" target="_blank">FAQ</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="https://myelitemassage.bemergroup.com" target="_blank">BEMER</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="policies.html">Policies</a></li>
             <li><a href="https://www.fresha.com/a/my-elite-massage-llc-friendswood-400-west-parkwood-avenue-i9cgwv4s/gift-cards?menu=true" target="_blank">Online Giftcards</a></li>
+            <li><a href="https://www.fresha.com/book-now/my-elite-massage-llc-oa1wvgdo/paid-plans?share=true&pId=490794" target="_blank">Memberships</a></li>
             <li><a href="https://www.fresha.com/book-now/my-elite-massage-llc-oa1wvgdo/services?lid=525184&eid=1521604&pId=490794" target="_blank">Book Now</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
         </ul>
     </nav>
     `;
